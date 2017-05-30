@@ -23,11 +23,11 @@ Quick start
 
 3. Run `python manage.py migrate` to create the polls models and model scheme.
 4. Add a superuser by running the command `python manage.py createsuperuser' and enter username and password.
- 
-5. Start the development server and visit http://127.0.0.1:8000/admin/
+5. Add username and password . Now you can login with the same credentials in your admin page.
+6. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a poll (you'll need the Admin app enabled).
 
-6. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
+7. Visit http://127.0.0.1:8000/polls/ to participate in the poll.
 
 PYPI Distribution
 -----------------
