@@ -23,11 +23,11 @@ class QuestionViewTests(TestCase):
         If no questions exist, an appropriate message should be displayed.
         """
         response = self.client.get(reverse('polls:index'))
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 404)
         self.assertContains(response, "No polls are available.")
         self.assertQuerysetEqual(response.context['latest_question_list'], [])
 
-    def test_index_view_with_a_past_question(self):
+    def test_index_view_with_a_past_question():
         """
         Questions with a pub_date in the past should be displayed on the
         index page.
@@ -39,7 +39,7 @@ class QuestionViewTests(TestCase):
             ['<Question: Past question.>']
         )
 
-    def test_index_view_with_a_future_question(self):
+    def test_index_view_with_a_future_question():
         """
         Questions with a pub_date in the future should not be displayed on
         the index page.
