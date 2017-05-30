@@ -1,5 +1,5 @@
 =====
-Polls for jenkins CI
+Polls app for jenkins CI
 =====
 
 Polls is a simple Django app to conduct Web-based polls. For each
